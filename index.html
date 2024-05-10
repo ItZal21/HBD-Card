@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+  <title>Happy Birthday</title>
+</head>
+<body>
+  <script src="script.js"></script>
+  <!-- Div untuk menampung elemen audio -->
+  <div id="audio-container">
+    <audio autoplay loop id="audio-player">
+        <source src="hapy.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  
+  <div class="card">
+    <img src="./birthday.svg" alt="birthday" class="birthday">
+    <div class="text">
+      <h2>Happy Birthday Grisell</h2>
+      <p>"Tahun ini adalah awal dari bab baru dalam buku kehidupanmu. 
+        Semoga setiap halaman diisi dengan kebahagiaan, cinta, dan 
+        petualangan yang tak terlupakan. Selamat ulang tahun! Jadilah dirimu 
+        yang terbaik dan nikmati setiap detiknya." <br> <br>Jangan lupa istirahat dan Jaga selalu kesehatanmu</p>
+      <p class="muted">- Faitzal</p>
+      <div class="wame">
+        <textarea id="message-box" placeholder="Tulis pesan untuk pembuat di sini..."></textarea><br>
+        <button name="buton1" onclick="sendMessage()">Kirim Pesan ke WhatsApp</button>
+      </div>
+      
+    </div>
+    <div class="space"></div>
+  </div>
+</body>
+</html>

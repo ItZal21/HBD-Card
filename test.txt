@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+  <title>Happy Birthday</title>
+</head>
+<body>
+  <script src="script.js"></script>
+  <!-- Div untuk menampung elemen audio -->
+  <div id="audio-container">
+    <audio autoplay loop id="audio-player">
+        <source src="hapy.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  
+  <div class="card">
+    <img src="./birthday.svg" alt="birthday" class="birthday">
+    <div class="text">
+      <h2>Happy Birthday Grisell</h2>
+      <p>"Tahun ini adalah awal dari bab baru dalam buku kehidupanmu. 
+        Semoga setiap halaman diisi dengan kebahagiaan, cinta, dan 
+        petualangan yang tak terlupakan. Selamat ulang tahun! Jadilah dirimu 
+        yang terbaik dan nikmati setiap detiknya."</p>
+        <p>Jangan lupa istirahat dan Jaga selalu kesehatanmu</p>
+      <p class="muted">- Faitzal</p>
+      <div class="wame">
+        <textarea id="message-box" placeholder="Tulis pesan Anda di sini..."></textarea><br>
+        <button name="buton1" onclick="sendMessage()">Kirim Pesan ke WhatsApp</button>
+      </div>
+      
+    </div>
+    <div class="space"></div>
+  </div>
+</body>
+</html>
+
+
+#audio-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  #audio-player {
+    display: none; /* hindari menampilkan pemutar audio yang bawaan */
+  }
+  
+  * {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  body {
+    background: #09bbac;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .card {
+    background: #fdfdfd;
+    border-radius: 4px;
+    height: 92vh;
+    width: 80vw;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    overflow: hidden;
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    .card {
+      flex-direction: row-reverse;
+    }
+    .card img.birthday {
+      width: 100%;
+      max-width: 50vw;
+      max-height: unset;
+    }
+  }
+  
+  @media only screen and (max-height: 640px) {
+    .card {
+      flex-direction: row-reverse;
+    }
+    .card img.birthday {
+      width: 100%;
+      max-width: 50vw;
+      max-height: unset;
+    }
+  }
+  
+  img.birthday {
+    max-height: 40vh;
+  }
+  
+  .text {
+    padding: 1em;
+  }
+  
+  .muted {
+    opacity: 0.8;
+  }
+  
+  .space {
+    height: 100px;
+  }
+
+  textarea {
+    width: 70%;
+    height: 70px;
+    resize: vertical;
+  }
+
+  /* CSS untuk tombol */
+button[name="buton1"] {
+  background-color: #25D366; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  padding: 10px 20px; /* Padding */
+  border-radius: 5px; /* Sudut border */
+  border: none; /* Menghapus border */
+  cursor: pointer; /* Mengubah kursor saat diarahkan ke tombol */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan */
+  transition: all 0.3s ease; /* Animasi saat hover */
+}
+
+/* Efek hover */
+button[name="buton1"]:hover {
+  background-color: #128C7E; /* Warna latar belakang saat dihover */
+}
+
+/* Mengatur posisi tombol */
+.wame button {
+  margin-top: 10px; /* Jarak dari atas */
+}
+
+
+CARA MENGATASI JIKA DI BUKA DI UKURAN HANDPHONE BAGIAN BAWAHNYA TERPOTONG
